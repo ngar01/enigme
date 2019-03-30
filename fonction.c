@@ -134,13 +134,14 @@ void deplacement_selection(int* choix, int* ligne, int* son, int* continuer, Mix
 (*son)=1;
 }
 //--------------------------------------------------------------------------------------------------------------------------------
-void update_affichage(int choix, int ligne, int son, SDL_Rect positionEnigme, SDL_Surface* ecran, SDL_Surface* imageDeFond, SDL_Surface* enigme)
+void update_affichage(int choix, int ligne, int son, SDL_Rect positionEnigme, SDL_Surface* ecran, SDL_Surface* imageDeFond, SDL_Surface* enigme,SDL_Rect positionFond)
 {
 
         if(ligne==1)
         {
             SDL_FreeSurface(enigme);
             enigme = IMG_Load("1.png");
+            SDL_BlitSurface(imageDeFond , NULL, ecran, &positionFond);
             SDL_BlitSurface(enigme, NULL, ecran, &positionEnigme);
                   SDL_Flip(ecran);
         }
@@ -149,6 +150,7 @@ void update_affichage(int choix, int ligne, int son, SDL_Rect positionEnigme, SD
         {
             SDL_FreeSurface(enigme);
             enigme = IMG_Load("2.png");
+            SDL_BlitSurface(imageDeFond , NULL, ecran, &positionFond);
             SDL_BlitSurface(enigme, NULL, ecran, &positionEnigme);
                   SDL_Flip(ecran);
         }
@@ -156,6 +158,7 @@ void update_affichage(int choix, int ligne, int son, SDL_Rect positionEnigme, SD
         {
             SDL_FreeSurface(enigme);
             enigme = IMG_Load("3.png");
+            SDL_BlitSurface(imageDeFond , NULL, ecran, &positionFond);
             SDL_BlitSurface(enigme, NULL, ecran, &positionEnigme);
                   SDL_Flip(ecran);
 
@@ -164,6 +167,7 @@ void update_affichage(int choix, int ligne, int son, SDL_Rect positionEnigme, SD
          {
             SDL_FreeSurface(enigme);
             enigme = IMG_Load("4.png");
+            SDL_BlitSurface(imageDeFond , NULL, ecran, &positionFond);
             SDL_BlitSurface(enigme, NULL, ecran, &positionEnigme);
                   SDL_Flip(ecran);
          }
