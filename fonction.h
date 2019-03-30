@@ -1,7 +1,7 @@
 #ifndef FONCTION_H_INCLUDED
 #define FONCTION_H_INCLUDED
 void deplacement_selection(int* choix, int* ligne, int* son, int* continuer, Mix_Chunk* button);
-void update_affichage(int choix, int ligne, int son, SDL_Rect positionEnigme, SDL_Surface* ecran, SDL_Surface* imageDeFond, SDL_Surface*enigme);
+void update_affichage(int choix, int ligne, int son, SDL_Rect positionEnigme, SDL_Surface* ecran, SDL_Surface* imageDeFond, SDL_Surface*enigme,SDL_Rect positionFond);
 void recuperation_enigme(char qcm[],int i);
 void recuperation_reponses(char rep1[], char rep2[], char rep3[], char rep4[], int i);
 void recuperation_tabRep(int reponse[]);
