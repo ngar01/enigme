@@ -81,7 +81,7 @@ while (continuer)
 choix=0;
 recuperation_texte(qcm, rep1, rep2, rep3, rep4, i);
 deplacement_selection(&choix, &ligne, &son, &continuer, button);
-update_affichage(choix, ligne, son, positionEnigme, ecran, imageDeFond, enigme);
+update_affichage(choix, ligne, son, positionEnigme, ecran, imageDeFond, enigme,positionFond);
 affichage_enigmes(ecran, question, r1, r2, r3, r4, qcm, rep1, rep2, rep3, rep4, police, couleurNoire, posQuestion, posR1, posR2, posR3, posR4);
 validation(choix, ligne, reponse, positionEnigme, ecran, youWin, gameOver, win, lose);
 if(choix!=0)
